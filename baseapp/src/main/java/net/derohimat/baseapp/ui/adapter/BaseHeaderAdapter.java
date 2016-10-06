@@ -12,7 +12,7 @@ import net.derohimat.baseapp.ui.adapter.viewholder.BaseItemViewHolder;
 
 /**
  * Created on : 05-03-2016
- * Author     : derohimat
+ * Author     : ragamania
  * Name       : Deni Rohimat
  * Email      : rohimatdeni@gmail.com
  * GitHub     : https://github.com/derohimat

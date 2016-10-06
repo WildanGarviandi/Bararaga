@@ -23,7 +23,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "net.derohimat.samplebasemvp"
+        applicationId "com.ragamania.bararaga"
         minSdkVersion 15
         targetSdkVersion 24
         versionCode 3
@@ -70,7 +70,8 @@ dependencies {
     final OKHTTP_VERSION = '3.4.1'
     final DAGGER_VERSION = '2.6.1'
 
-    compile project(':baseapp')
+    compile "com.android.support:appcompat-v7:24.0.+"
+    compile 'com.github.derohimat:android-base-mvp:0.3'
     compile fileTree(dir: 'libs', include: ['*.jar'])
 
     //----- Dagger

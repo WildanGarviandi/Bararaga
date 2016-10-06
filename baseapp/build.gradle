@@ -3,7 +3,7 @@ apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'com.neenbedankt.android-apt'
 apply plugin: 'com.github.dcendents.android-maven'
 
-group = 'com.github.derohimat'
+group = 'com.github.ragamania'
 
 android {
     compileSdkVersion 24
