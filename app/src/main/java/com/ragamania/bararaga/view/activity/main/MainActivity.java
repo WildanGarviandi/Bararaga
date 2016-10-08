@@ -3,53 +3,21 @@ package com.ragamania.bararaga.view.activity.main;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.content.ContextCompat;
+import android.support.design.widget.TabLayout;
+import android.support.v4.view.ViewPager;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.ProgressBar;
-import android.widget.TextView;
 
-import com.ragamania.bararaga.events.MessagesEvent;
-import com.ragamania.bararaga.model.weather.WeatherPojo;
-import com.ragamania.bararaga.util.UnitLocale;
+import com.ragamania.bararaga.R;
 import com.ragamania.bararaga.view.AppBaseActivity;
 import com.ragamania.bararaga.view.activity.settings.SettingsActivity;
-import com.ragamania.bararaga.view.fragment.detail.DetailFragment;
-import com.ragamania.bararaga.R;
-import com.ragamania.bararaga.util.DialogFactory;
 
 import org.greenrobot.eventbus.EventBus;
-import org.greenrobot.eventbus.Subscribe;
 
 import javax.inject.Inject;
 
-import butterknife.Bind;
-import butterknife.OnClick;
-import timber.log.Timber;
-
 public class MainActivity extends AppBaseActivity implements MainMvpView {
-
-    @Bind(R.id.textview_main_city)
-    TextView textview_main_city;
-    @Bind(R.id.textView_main_conditions)
-    TextView textView_main_conditions;
-    @Bind(R.id.textView_main_current_temperature)
-    TextView textView_main_current_temperature;
-    @Bind(R.id.textView_main_min_max)
-    TextView textView_main_min_max;
-    @Bind(R.id.textView_main_pressure)
-    TextView textView_main_pressure;
-    @Bind(R.id.textView_main_humidity)
-    TextView textView_main_humidity;
-    @Bind(R.id.textView_main_wind)
-    TextView textView_main_wind;
-    @Bind(R.id.imageView_main_icon)
-    ImageView imageView_main_icon;
-    @Bind(R.id.button_main_next_days)
-    Button button_main_next_days;
 
     private static ProgressBar mProgressBar = null;
     private MainPresenter mMainPresenter;
@@ -64,38 +32,24 @@ public class MainActivity extends AppBaseActivity implements MainMvpView {
 
     @Override
     protected void onViewReady(Bundle savedInstanceState) {
-        mMainPresenter = new MainPresenter(this);
-        mMainPresenter.attachView(this);
 
-        getBaseActionBar().setElevation(0);
-
-        getBaseFragmentManager().addOnBackStackChangedListener(() -> {
-            if (getSupportFragmentManager().getBackStackEntryCount() > 0) {
-                getBaseActionBar().setDisplayHomeAsUpEnabled(true);
-            } else {
-                getBaseActionBar().setTitle(getString(R.string.app_name));
-                getBaseActionBar().setDisplayHomeAsUpEnabled(false);
-            }
-        });
-
-        mMainPresenter.loadWeather("Bandung");
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getComponent().inject(this);
-    }
 
-    @OnClick(R.id.button_main_next_days)
-    void onClick_button_main_next_days() {
-        getBaseActionBar().setTitle("Next days");
-        getBaseFragmentManager().beginTransaction().replace(R.id.container_rellayout, DetailFragment.newInstance(1)).addToBackStack(null).commit();
+        MainAdapter adapter = new MainAdapter(getSupportFragmentManager());
+        ViewPager viewPager = (ViewPager)findViewById(R.id.viewpager);
+        viewPager.setAdapter(adapter);
+        TabLayout tabLayout = (TabLayout)findViewById(R.id.tablayout);
+        tabLayout.setupWithViewPager(viewPager);
     }
 
     @Override
     protected void onDestroy() {
-        mMainPresenter.detachView();
+//        mMainPresenter.detachView();
         super.onDestroy();
     }
 
@@ -121,7 +75,6 @@ public class MainActivity extends AppBaseActivity implements MainMvpView {
 
                 } else {
                     //--- we are here
-                    mMainPresenter.loadWeather("Bandung");
                 }
 
                 return true;
@@ -133,56 +86,13 @@ public class MainActivity extends AppBaseActivity implements MainMvpView {
     @Override
     public void onStart() {
         super.onStart();
-        eventBus.register(this);
+//        eventBus.register(this);
     }
 
     @Override
     public void onStop() {
         eventBus.unregister(this);
         super.onStop();
-    }
-
-    @Subscribe
-    public void onEvent(MessagesEvent event) {
-        if (event.ismSuccess()) {
-            DialogFactory.createSimpleOkDialog(mContext, getString(R.string.app_name), event.getMessage()).show();
-        } else {
-            DialogFactory.showErrorSnackBar(mContext, findViewById(android.R.id.content), new Throwable(event.getMessage())).show();
-        }
-    }
-
-    @Override
-    public void showWeather(WeatherPojo weatherPojo) {
-
-        Timber.d("show Weather %s", weatherPojo.toString());
-
-        textview_main_city.setText(weatherPojo.getName());
-        textView_main_current_temperature.setText(String.format("%.1f°", weatherPojo.getMain().getTemp()));
-        textView_main_min_max.setText(String.format("%.1f°  %.1f°", weatherPojo.getMain().getTempMin(), weatherPojo.getMain().getTempMax()));
-        textView_main_conditions.setText(weatherPojo.getWeather().get(0).getDescription());
-        textView_main_humidity.setText(getString(R.string.humidity) + " " + weatherPojo.getMain().getHumidity() + "%");
-
-        String wind_suffix = getResources().getString(R.string.wind_suffix_metric);
-        if (UnitLocale.getDefault().equals(UnitLocale.Imperial))
-            wind_suffix = getResources().getString(R.string.wind_suffix_imperial);
-        textView_main_wind.setText(getString(R.string.wind) + " " + String.valueOf(weatherPojo.getWind().getSpeed()) + wind_suffix);
-
-        textView_main_pressure.setText(getString(R.string.pressure) + " " + weatherPojo.getMain().getPressure() + "hPa");
-        imageView_main_icon.setImageDrawable(ContextCompat.getDrawable(getContext(), getIcon(weatherPojo.getWeather().get(0).getId())));
-    }
-
-    @Override
-    public void showProgress() {
-        if (mProgressBar == null) {
-            mProgressBar = DialogFactory.DProgressBar(mContext);
-        } else {
-            mProgressBar.setVisibility(View.VISIBLE);
-        }
-    }
-
-    @Override
-    public void hideProgress() {
-        mProgressBar.setVisibility(View.GONE);
     }
 
     @Override

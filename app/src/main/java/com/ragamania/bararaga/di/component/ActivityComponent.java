@@ -16,4 +16,5 @@ public interface ActivityComponent extends ApplicationComponent {
     void inject(SettingsActivity settingsActivity);
 
     void inject(AuthActivity authActivity);
+
 }

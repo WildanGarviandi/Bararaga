@@ -1,14 +1,16 @@
 package com.ragamania.bararaga.di.component;
 
 import com.ragamania.bararaga.BaseApplication;
+import com.ragamania.bararaga.data.local.PreferencesHelper;
 import com.ragamania.bararaga.data.remote.APIService;
 import com.ragamania.bararaga.data.remote.UnauthorisedInterceptor;
 import com.ragamania.bararaga.di.module.ApplicationModule;
 import com.ragamania.bararaga.view.activity.auth.AuthPresenter;
 import com.ragamania.bararaga.view.activity.main.MainPresenter;
-import com.ragamania.bararaga.view.fragment.detail.DetailPresenter;
-import com.ragamania.bararaga.data.local.PreferencesHelper;
+import com.ragamania.bararaga.view.fragment.articles.ArticlesPresenter;
+import com.ragamania.bararaga.view.fragment.coaches.CoachesPresenter;
 import com.ragamania.bararaga.view.fragment.login.LoginPresenter;
+import com.ragamania.bararaga.view.fragment.places.PlacesPresenter;
 
 import org.greenrobot.eventbus.EventBus;
 
@@ -26,7 +28,11 @@ public interface ApplicationComponent {
 
     void inject(LoginPresenter loginPresenter);
 
-    void inject(DetailPresenter detailPresenter);
+    void inject(PlacesPresenter placesPresenter);
+
+    void inject(CoachesPresenter coachesPresenter);
+
+    void inject(ArticlesPresenter articlesPresenter);
 
     void inject(BaseApplication baseApplication);
 

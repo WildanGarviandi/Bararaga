@@ -9,6 +9,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_marginTop="70sp"
         android:contentDescription="@string/desc_logo_image"
         android:src="@drawable/bararaga_logo" />
 
@@ -27,35 +28,39 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="40sp"
+        android:layout_weight="1"
         android:orientation="vertical">
 
-        <android.support.design.widget.TextInputLayout
-            android:id="@+id/input_email_layout"
+        <EditText
+            android:id="@+id/input_email"
+            android:layout_width="match_parent"
+            android:layout_height="@android:dimen/app_icon_size"
+            android:background="@color/white"
+            android:hint="@string/email_address"
+            android:inputType="textEmailAddress"
+            android:padding="10dp" />
+
+        <EditText
+            android:id="@+id/input_password"
+            android:layout_width="match_parent"
+            android:layout_height="@android:dimen/app_icon_size"
+            android:background="@color/white"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:padding="10dp" />
+
+        <Button
+            android:id="@+id/button_signin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1">
+            android:layout_marginTop="25sp"
+            android:background="@drawable/button_border"
+            android:text="Sign In"
+            android:textAllCaps="false"
+            android:textColor="#979797">
 
-            <EditText
-                android:id="@+id/input_email"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/email_address"
-                android:inputType="textEmailAddress" />
-        </android.support.design.widget.TextInputLayout>
+        </Button>
 
-        <android.support.design.widget.TextInputLayout
-            android:id="@+id/input_password_layout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="2">
-
-            <EditText
-                android:id="@+id/input_password"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/password"
-                android:inputType="textPassword" />
-        </android.support.design.widget.TextInputLayout>
     </LinearLayout>
 
 </LinearLayout>

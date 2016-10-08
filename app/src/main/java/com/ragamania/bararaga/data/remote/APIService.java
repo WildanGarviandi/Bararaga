@@ -2,9 +2,7 @@ package com.ragamania.bararaga.data.remote;
 
 import android.content.Context;
 
-import com.ragamania.bararaga.model.weather.WeatherPojo;
 import com.ragamania.bararaga.BuildConfig;
-import com.ragamania.bararaga.model.forecast.Forecast;
 
 import java.util.concurrent.TimeUnit;
 
@@ -23,14 +21,14 @@ public interface APIService {
     String ENDPOINT = "http://api.openweathermap.org/";
     String API_KEY = "aa9af8d39d6519b1d47dec305bd253a4";
 
-    @GET("data/2.5/weather?APPID=" + API_KEY)
-    Observable<WeatherPojo> getWeatherForLatLon(@Query("lat") double lat, @Query("lng") double lng, @Query("units") String units);
-
-    @GET("data/2.5/weather?APPID=" + API_KEY)
-    Observable<WeatherPojo> getWeatherForCity(@Query("q") String city, @Query("units") String units);
-
-    @GET("data/2.5/forecast?APPID=" + API_KEY)
-    Observable<Forecast> getForecastForCity(@Query("q") String city, @Query("units") String units, @Query("cnt") int cnt);
+//    @GET("data/2.5/weather?APPID=" + API_KEY)
+//    Observable<WeatherPojo> getWeatherForLatLon(@Query("lat") double lat, @Query("lng") double lng, @Query("units") String units);
+//
+//    @GET("data/2.5/weather?APPID=" + API_KEY)
+//    Observable<WeatherPojo> getWeatherForCity(@Query("q") String city, @Query("units") String units);
+//
+//    @GET("data/2.5/forecast?APPID=" + API_KEY)
+//    Observable<Forecast> getForecastForCity(@Query("q") String city, @Query("units") String units, @Query("cnt") int cnt);
 
     class Factory {
 
