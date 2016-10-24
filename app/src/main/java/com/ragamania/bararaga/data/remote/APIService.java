@@ -3,6 +3,7 @@ package com.ragamania.bararaga.data.remote;
 import android.content.Context;
 
 import com.ragamania.bararaga.BuildConfig;
+import com.ragamania.bararaga.model.PlacesList;
 
 import java.util.concurrent.TimeUnit;
 
@@ -13,13 +14,15 @@ import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.http.GET;
-import retrofit2.http.Query;
 import rx.Observable;
 
 public interface APIService {
 
-    String ENDPOINT = "http://api.openweathermap.org/";
+    String ENDPOINT = "https://api.myjson.com/bins/";
     String API_KEY = "aa9af8d39d6519b1d47dec305bd253a4";
+
+    @GET("4xwzo")
+    Observable<PlacesList> getPlaceList();
 
 //    @GET("data/2.5/weather?APPID=" + API_KEY)
 //    Observable<WeatherPojo> getWeatherForLatLon(@Query("lat") double lat, @Query("lng") double lng, @Query("units") String units);

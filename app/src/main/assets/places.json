@@ -1,0 +1,83 @@
+{
+  "status": 200,
+  "message": "Places for 20-15-2016",
+  "array": [
+    {
+      "place_id": 1,
+      "name": "Futsal Patiunus",
+      "desc": "Lapangan Futsal",
+      "img_url": "http://harga.web.id/wp-content/uploads/Lapangan-Futsal-Indoor.jpeg",
+      "place_owner": {
+        "name": "Slamet",
+        "icon": "http://www.playcoolsprings.com/sites/playcoolsprings.com/files/cool_springs_icon_futsal_hover.png",
+        "desc": "yang punya abang gw nih"
+      }
+    },
+    {
+      "place_id": 2,
+      "name": "Jakarta MMA & Muay Thai",
+      "desc": "MMA & Muay thai training camp",
+      "img_url": "http://static.asiawebdirect.com/m/bangkok/portals/bangkok-com/shared/teasersL/magazine/muay-thai-live-show/teaserMultiLarge/image/muay-thai-live-show.jpg",
+      "place_owner": {
+        "name": "Slamet",
+        "icon": "http://www.cjmartialartsnanaimo.ca/i/about-classes-2.png",
+        "desc": "yang punya abang gw nih"
+      }
+    },
+    {
+      "place_id": 3,
+      "name": "Futsal Patiunus",
+      "desc": "Lapangan Futsal",
+      "img_url": "http://harga.web.id/wp-content/uploads/Lapangan-Futsal-Indoor.jpeg",
+      "place_owner": {
+        "name": "Slamet",
+        "icon": "http://www.playcoolsprings.com/sites/playcoolsprings.com/files/cool_springs_icon_futsal_hover.png",
+        "desc": "yang punya abang gw nih"
+      }
+    },
+    {
+      "place_id": 4,
+      "name": "Futsal Patiunus",
+      "desc": "Lapangan Futsal",
+      "img_url": "http://harga.web.id/wp-content/uploads/Lapangan-Futsal-Indoor.jpeg",
+      "place_owner": {
+        "name": "Slamet",
+        "icon": "http://www.playcoolsprings.com/sites/playcoolsprings.com/files/cool_springs_icon_futsal_hover.png",
+        "desc": "yang punya abang gw nih"
+      }
+    },
+    {
+      "place_id": 5,
+      "name": "Futsal Patiunus",
+      "desc": "Lapangan Futsal",
+      "img_url": "http://harga.web.id/wp-content/uploads/Lapangan-Futsal-Indoor.jpeg",
+      "place_owner": {
+        "name": "Slamet",
+        "icon": "http://www.playcoolsprings.com/sites/playcoolsprings.com/files/cool_springs_icon_futsal_hover.png",
+        "desc": "yang punya abang gw nih"
+      }
+    },
+    {
+      "place_id": 6,
+      "name": "Futsal Patiunus",
+      "desc": "Lapangan Futsal",
+      "img_url": "http://harga.web.id/wp-content/uploads/Lapangan-Futsal-Indoor.jpeg",
+      "place_owner": {
+        "name": "Slamet",
+        "icon": "http://www.playcoolsprings.com/sites/playcoolsprings.com/files/cool_springs_icon_futsal_hover.png",
+        "desc": "yang punya abang gw nih"
+      }
+    },
+    {
+      "place_id": 7,
+      "name": "Futsal Patiunus",
+      "desc": "Lapangan Futsal",
+      "img_url": "http://harga.web.id/wp-content/uploads/Lapangan-Futsal-Indoor.jpeg",
+      "place_owner": {
+        "name": "Slamet",
+        "icon": "http://www.playcoolsprings.com/sites/playcoolsprings.com/files/cool_springs_icon_futsal_hover.png",
+        "desc": "yang punya abang gw nih"
+      }
+    }
+  ]
+}

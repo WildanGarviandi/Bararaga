@@ -3,14 +3,10 @@ package com.ragamania.bararaga.view.fragment.places;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 
 import com.jcodecraeer.xrecyclerview.XRecyclerView;
 import com.ragamania.bararaga.R;
-import com.ragamania.bararaga.view.activity.main.MainActivity;
+import com.ragamania.bararaga.model.PlacesList;
 
 import net.derohimat.baseapp.ui.fragment.BaseFragment;
 import net.derohimat.baseapp.ui.view.BaseRecyclerView;
@@ -82,7 +78,14 @@ public class PlacesFragment extends BaseFragment implements PlacesMvpView {
     }
 
     private void setUpPresenter() {
-
+        mPresenter = new PlacesPresenter(getActivity());
+        mPresenter.attachView(this);
+        mPresenter.loadPlacesList();
     }
 
+    @Override
+    public void loadPlacesList(PlacesList placesList) {
+        mAdapter.add(placesList);
+        mRecyclerView.refreshComplete();
+    }
 }

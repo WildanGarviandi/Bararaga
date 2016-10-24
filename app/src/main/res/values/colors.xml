@@ -203,7 +203,7 @@
     <color name="MediumBlue">#ff0000cd</color>
     <color name="DarkBlue">#ff00008b</color>
     <color name="Navy">#ff000080</color>
-    <color name="Black">#ff000000</color>
+    <color name="Black">#000000</color>
     <color name="transparent">#00000000</color>
     <color name="transparent_black_25">#25000000</color>
     <color name="transparent_black_50">#50000000</color>

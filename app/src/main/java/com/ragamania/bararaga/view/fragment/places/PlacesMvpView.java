@@ -1,5 +1,6 @@
 package com.ragamania.bararaga.view.fragment.places;
 
+import com.ragamania.bararaga.model.PlacesList;
 import com.ragamania.bararaga.view.MvpView;
 
 /**
@@ -7,4 +8,6 @@ import com.ragamania.bararaga.view.MvpView;
  */
 
 public interface PlacesMvpView extends MvpView {
+
+    void loadPlacesList(PlacesList placesList);
 }
