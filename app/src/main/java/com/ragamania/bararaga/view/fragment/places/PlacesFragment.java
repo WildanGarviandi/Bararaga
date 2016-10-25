@@ -11,6 +11,8 @@ import com.ragamania.bararaga.model.PlacesList;
 import net.derohimat.baseapp.ui.fragment.BaseFragment;
 import net.derohimat.baseapp.ui.view.BaseRecyclerView;
 
+import java.util.List;
+
 import butterknife.Bind;
 
 /**
@@ -60,7 +62,7 @@ public class PlacesFragment extends BaseFragment implements PlacesMvpView {
         LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         mRecyclerView.setLayoutManager(layoutManager);
-        mRecyclerView.setAdapter(new PlacesRecyclerAdapter(getContext()));
+        mRecyclerView.setAdapter(mAdapter);
 
         mRecyclerView.setPullRefreshEnabled(true);
         mRecyclerView.setLoadingMoreEnabled(false);
@@ -84,8 +86,8 @@ public class PlacesFragment extends BaseFragment implements PlacesMvpView {
     }
 
     @Override
-    public void loadPlacesList(PlacesList placesList) {
-        mAdapter.add(placesList);
+    public void loadPlacesList(List<PlacesList> placesList) {
+        mAdapter.addAll(placesList);
         mRecyclerView.refreshComplete();
     }
 }

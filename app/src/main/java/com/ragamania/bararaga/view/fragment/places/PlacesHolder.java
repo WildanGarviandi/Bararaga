@@ -10,8 +10,6 @@ import com.ragamania.bararaga.model.PlacesList;
 import net.derohimat.baseapp.ui.adapter.BaseRecyclerAdapter;
 import net.derohimat.baseapp.ui.adapter.viewholder.BaseItemViewHolder;
 
-import java.util.List;
-
 import butterknife.Bind;
 import timber.log.Timber;
 
@@ -19,9 +17,7 @@ import timber.log.Timber;
  * Created by wildangarviandi on 10/8/16.
  */
 
-public class PlacesHolder extends BaseItemViewHolder<List> {
-
-    private List<String> placesLists;
+public class PlacesHolder extends BaseItemViewHolder<PlacesList> {
 
     @Bind(R.id.text_place_name)
     TextView tvPlaceName;
@@ -38,7 +34,7 @@ public class PlacesHolder extends BaseItemViewHolder<List> {
     }
 
     @Override
-    public void bind(List mPlacesList) {
+    public void bind(PlacesList mPlacesList) {
         Timber.i("places loaded %s", mPlacesList);
         tvPlaceName.setText("ahaha");
         tvDescName.setText("ahahaha");
