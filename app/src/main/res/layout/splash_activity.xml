@@ -4,9 +4,9 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <net.derohimat.baseapp.ui.view.BaseRecyclerView
-        android:id="@+id/recyclerview"
+    <ImageView
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
+        android:layout_height="match_parent"
+        android:src="@drawable/bg_splashscreen001"
+        android:scaleType="centerCrop"/>
 </LinearLayout>

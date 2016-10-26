@@ -4,7 +4,7 @@ import android.content.Context;
 
 import com.ragamania.bararaga.BaseApplication;
 import com.ragamania.bararaga.data.remote.APIService;
-import com.ragamania.bararaga.model.BaseResponse;
+import com.ragamania.bararaga.model.BaseResponsePlaces;
 
 import net.derohimat.baseapp.presenter.BasePresenter;
 
@@ -23,7 +23,7 @@ public class PlacesPresenter implements BasePresenter<PlacesMvpView> {
 
     private PlacesMvpView mPlacesMvpView;
     private Subscription mSubscription;
-    private BaseResponse mResponse;
+    private BaseResponsePlaces mResponse;
     
     @Inject
     public PlacesPresenter(Context context) {
@@ -53,7 +53,7 @@ public class PlacesPresenter implements BasePresenter<PlacesMvpView> {
         mSubscription = mAPIService.getPlaceList()
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeOn(baseApplication.getSubscribeScheduler())
-                .subscribe(new Subscriber<BaseResponse>() {
+                .subscribe(new Subscriber<BaseResponsePlaces>() {
                     @Override
                     public void onCompleted() {
                         Timber.i("places loaded %s", mResponse);
@@ -66,7 +66,7 @@ public class PlacesPresenter implements BasePresenter<PlacesMvpView> {
                     }
 
                     @Override
-                    public void onNext(BaseResponse placesList) {
+                    public void onNext(BaseResponsePlaces placesList) {
                         mResponse = placesList;
                     }
                 });

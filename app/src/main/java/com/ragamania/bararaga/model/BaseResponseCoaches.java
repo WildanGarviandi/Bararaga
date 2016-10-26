@@ -3,12 +3,10 @@ package com.ragamania.bararaga.model;
 import java.util.List;
 
 /**
- * Created by wildangarviandi on 10/22/16.
+ * Created by wildangarviandi on 10/27/16.
  */
 
-
-public class BaseResponse {
-
+public class BaseResponseCoaches {
     /**
      * status : 200
      * message : Places for 20-15-2016
@@ -17,7 +15,7 @@ public class BaseResponse {
 
     private int status;
     private String message;
-    private List<PlacesList> array;
+    private List<CoachesList> array;
 
     public int getStatus() {
         return status;
@@ -35,11 +33,11 @@ public class BaseResponse {
         this.message = message;
     }
 
-    public List<PlacesList> getArray() {
+    public List<CoachesList> getArray() {
         return array;
     }
 
-    public void setArray(List<PlacesList> array) {
+    public void setArray(List<CoachesList> array) {
         this.array = array;
     }
 }

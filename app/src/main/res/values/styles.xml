@@ -74,5 +74,10 @@
         <item name="android:scaleX">0.5</item>
         <item name="android:scaleY">0.5</item>
     </style>
+    
+    <style name="AppTheme.NoActionBar" parent="AppTheme">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
 
 </resources>

@@ -8,38 +8,37 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by wildangarviandi on 10/22/16.
+ * Created by wildangarviandi on 10/27/16.
  */
 
-
-public class PlacesList {
+public class CoachesList {
 
     /**
-     * place_id : 1
-     * name : Futsal Patiunus
-     * desc : Lapangan Futsal
-     * img_url : http://harga.web.id/wp-content/uploads/Lapangan-Futsal-Indoor.jpeg
+     * coaches_id : 1
+     * name : Mochamad Slamet
+     * desc : Long Distance Running Coach
+     * img_url : http://cdn.running.competitor.com/files/2011/07/long-run.jpg
      */
 
-    private int place_id;
+    private int coaches_id;
     private String name;
     private String desc;
     private String img_url;
 
-    public static List<PlacesList> arrayPlacesListFromData(String str) {
+    public static List<CoachesList> arrayCoachesListFromData(String str) {
 
-        Type listType = new TypeToken<ArrayList<PlacesList>>() {
+        Type listType = new TypeToken<ArrayList<CoachesList>>() {
         }.getType();
 
         return new Gson().fromJson(str, listType);
     }
 
-    public int getPlace_id() {
-        return place_id;
+    public int getCoaches_id() {
+        return coaches_id;
     }
 
-    public void setPlace_id(int place_id) {
-        this.place_id = place_id;
+    public void setCoaches_id(int coaches_id) {
+        this.coaches_id = coaches_id;
     }
 
     public String getName() {

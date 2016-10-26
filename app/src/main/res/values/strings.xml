@@ -19,6 +19,8 @@
     <string name="dialog_action_delete">Delete</string>
     <string name="dialog_action_cancel">Cancel</string>
 
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
     <string name="dialog_error_title">Oops</string>
     <string name="dialog_general_error_Message">There was an error making the request</string>
     <string name="dialog_error_no_connection">Sorry, you need a connection to do that!</string>
@@ -43,4 +45,10 @@
     <string name="password">Password</string>
     <string name="email_address">Email Address</string>
 
+    <string-array name="menu_drawer">
+        <item>Profile</item>
+        <item>Message</item>
+        <item>Calendar</item>
+        <item>Settings</item>
+    </string-array>
 </resources>

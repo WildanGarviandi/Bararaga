@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="center"
-        android:layout_margin="20sp"
+        android:layout_margin="10sp"
         android:elevation="3dp"
         card_view:cardCornerRadius="3sp">
 
@@ -26,7 +26,7 @@
                     android:id="@+id/image_icon"
                     android:layout_width="40sp"
                     android:layout_height="40sp"
-                    android:src="@color/orange_light"
+                    android:src="@drawable/icon_places"
                     android:layout_margin="5sp"/>
 
                 <TextView
@@ -45,7 +45,7 @@
                     android:id="@+id/text_text_place_desc"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/Black"
+                    android:textColor="@color/secondary_text"
                     android:layout_marginTop="5sp"
                     tools:text="MMA and Muaythai sasana"
                     android:layout_below="@+id/text_place_name"
@@ -61,7 +61,7 @@
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:clickable="true"
                 android:scaleType="fitXY"
-                android:src="@drawable/background_login" />
+                android:src="@drawable/places_image_1" />
 
 
         </RelativeLayout>
