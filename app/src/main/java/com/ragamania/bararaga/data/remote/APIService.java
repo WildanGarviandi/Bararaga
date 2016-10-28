@@ -5,6 +5,7 @@ import android.content.Context;
 import com.ragamania.bararaga.BuildConfig;
 import com.ragamania.bararaga.model.BaseResponseCoaches;
 import com.ragamania.bararaga.model.BaseResponsePlaces;
+import com.ragamania.bararaga.model.DetailCoaches.BaseResponseDetailCoach;
 
 import java.util.concurrent.TimeUnit;
 
@@ -27,6 +28,10 @@ public interface APIService {
 
     @GET("55law")
     Observable<BaseResponseCoaches> getCoachesList();
+
+    @GET("3fkfu")
+    Observable<BaseResponseDetailCoach> getDetailCoach();
+
 
 //    @GET("data/2.5/weather?APPID=" + API_KEY)
 //    Observable<WeatherPojo> getWeatherForLatLon(@Query("lat") double lat, @Query("lng") double lng, @Query("units") String units);

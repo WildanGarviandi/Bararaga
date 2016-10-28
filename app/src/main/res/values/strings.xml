@@ -44,6 +44,8 @@
     <string name="desc_logo_image">logo image</string>
     <string name="password">Password</string>
     <string name="email_address">Email Address</string>
+    <string name="text_dummy_detail_1">I am a running coach. I train athletes that wants to become olympians. My classes are usually located around southern parts of Jakarta</string>
+    <string name="text_dummy_schedule_1">Contact me for more details regarding my training schedules.</string>
 
     <string-array name="menu_drawer">
         <item>Profile</item>

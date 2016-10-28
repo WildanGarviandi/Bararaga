@@ -106,7 +106,7 @@
     <color name="Beige">#fff5f5dc</color>
     <color name="Wheat">#fff5deb3</color>
     <color name="SandyBrown">#fff4a460</color>
-    <color name="Azure">#fff0ffff</color>
+    <color name="Azure">#f0ffff</color>
     <color name="Honeydew">#fff0fff0</color>
     <color name="AliceBlue">#fff0f8ff</color>
     <color name="Khaki">#fff0e68c</color>
@@ -166,7 +166,7 @@
     <color name="LawnGreen">#ff7cfc00</color>
     <color name="MediumSlateBlue">#ff7b68ee</color>
     <color name="LightSlateGray">#ff778899</color>
-    <color name="SlateGray">#ff708090</color>
+    <color name="SlateGray">#708090</color>
     <color name="OliveDrab">#ff6b8e23</color>
     <color name="SlateBlue">#ff6a5acd</color>
     <color name="DimGray">#ff696969</color>

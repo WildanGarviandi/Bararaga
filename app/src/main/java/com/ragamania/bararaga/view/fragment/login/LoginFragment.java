@@ -45,7 +45,7 @@ public class LoginFragment extends BaseFragment implements LoginMvpView {
     public void gotoDetail() {
         Intent i = new Intent(getActivity(), MainActivity.class);
         startActivity(i);
-        ((Activity) getActivity()).overridePendingTransition(0,0);
+        getActivity().overridePendingTransition(0,0);
         getActivity().finish();
     }
 }

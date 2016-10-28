@@ -6,9 +6,6 @@ import android.view.ViewGroup;
 import com.ragamania.bararaga.R;
 
 import net.derohimat.baseapp.ui.adapter.BaseRecyclerAdapter;
-import net.derohimat.baseapp.ui.adapter.viewholder.BaseItemViewHolder;
-
-import java.util.List;
 
 /**
  * Created by wildangarviandi on 10/8/16.

@@ -5,10 +5,10 @@ import android.content.Context;
 import android.content.pm.ApplicationInfo;
 import android.support.annotation.VisibleForTesting;
 
+import com.ragamania.bararaga.di.component.ApplicationComponent;
 import com.ragamania.bararaga.di.component.DaggerApplicationComponent;
 import com.ragamania.bararaga.di.module.ApplicationModule;
 import com.ragamania.bararaga.events.AuthenticationErrorEvent;
-import com.ragamania.bararaga.di.component.ApplicationComponent;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;

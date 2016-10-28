@@ -3,29 +3,21 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/navigation_item_attachment"
-            android:checked="true"
-            android:icon="@drawable/ic_clear"
-            android:title="clear" />
+            android:id="@+id/navigation_profile"
+            android:icon="@drawable/ic_person_outline_black_48dp"
+            android:title="Profile" />
         <item
-            android:id="@+id/navigation_item_images"
-            android:icon="@drawable/ic_clear"
-            android:title="clear" />
+            android:id="@+id/navigation_message"
+            android:icon="@drawable/ic_local_post_office_black_48dp"
+            android:title="Message" />
         <item
-            android:id="@+id/navigation_item_location"
-            android:icon="@drawable/ic_clear"
-            android:title="clear" />
+            android:id="@+id/navigation_calendar"
+            android:icon="@drawable/ic_insert_invitation_black_48dp"
+            android:title="Calendar" />
+        <item
+            android:id="@+id/navigation_settings"
+            android:icon="@drawable/ic_brightness_7_black_48dp"
+            android:title="Settings" />
     </group>
-
-    <item android:title="sub menu">
-        <menu>
-            <item
-                android:icon="@drawable/ic_clear"
-                android:title="clear" />
-            <item
-                android:icon="@drawable/ic_clear"
-                android:title="clear" />
-        </menu>
-    </item>
 
 </menu>

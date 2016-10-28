@@ -1,5 +1,6 @@
 package com.ragamania.bararaga.view.fragment.places;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
@@ -7,6 +8,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import com.jcodecraeer.xrecyclerview.XRecyclerView;
 import com.ragamania.bararaga.R;
 import com.ragamania.bararaga.model.PlacesList;
+import com.ragamania.bararaga.view.activity.detail_list.DetailListActivity;
 
 import net.derohimat.baseapp.ui.fragment.BaseFragment;
 import net.derohimat.baseapp.ui.view.BaseRecyclerView;
@@ -53,7 +55,7 @@ public class PlacesFragment extends BaseFragment implements PlacesMvpView {
     private void setUpAdapter() {
         mAdapter = new PlacesRecyclerAdapter(mContext);
         mAdapter.setOnItemClickListener((view, position) -> {
-
+            gotoDetail();
         });
     }
 
@@ -89,5 +91,11 @@ public class PlacesFragment extends BaseFragment implements PlacesMvpView {
     public void loadPlacesList(List<PlacesList> placesList) {
         mAdapter.addAll(placesList);
         mRecyclerView.refreshComplete();
+    }
+
+    private void gotoDetail() {
+        Intent i = new Intent(getActivity(), DetailListActivity.class);
+        startActivity(i);
+        getActivity().overridePendingTransition(0,0);
     }
 }

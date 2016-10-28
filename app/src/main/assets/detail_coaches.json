@@ -1,0 +1,28 @@
+{
+  "status": 200,
+  "message": "Places for 20-15-2016",
+  "coaches" : {
+    "coach_id":"1",
+    "bio":{
+      "phone_number":"08161462736",
+      "email":"garviandiwildan@gmail.com",
+      "address":"Kuningan selatan no.1",
+      "image_url":"http://coachparry.com/wp-content/uploads/2014/08/ACP117.jpg"
+    },
+    "name":"MOCHAMMAD SLAMET",
+    "profession":"Running Coach",
+    "overview":"I am a running coach. I train athletes that wants to become olympians. My classes are usually located around southern parts of Jakarta",
+    "schedule":[{
+      "day":"Senin",
+      "time":"28-03-2016 : 18.00-22.30"
+    },
+      {
+        "day":"Selasa",
+        "time":"28-03-2016 : 18.00-22.30"
+      },
+      {
+        "day":"Rabu",
+        "time":"28-03-2016 : 18.00-22.30"
+      }]
+  }
+}
