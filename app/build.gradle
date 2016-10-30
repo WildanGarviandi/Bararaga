@@ -23,7 +23,7 @@ android {
 
     defaultConfig {
         applicationId "com.ragamania.bararaga"
-        minSdkVersion 15
+        minSdkVersion 16
         targetSdkVersion 24
         versionCode 3
         versionName "0.3"
@@ -77,6 +77,8 @@ dependencies {
     compile "com.google.dagger:dagger:$DAGGER_VERSION"
     apt "com.google.dagger:dagger-compiler:$DAGGER_VERSION"
     provided 'org.glassfish:javax.annotation:10.0-b28' //Required by Dagger2
+
+    compile 'co.devcenter.square:android-ui-library:0.1'
 
     //----- Retrofit
     compile("com.squareup.retrofit2:retrofit:$RETROFIT_VERSION") {

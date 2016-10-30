@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/Azure"
     android:orientation="vertical">
 
     <include layout="@layout/toolbar_layout" />
@@ -14,6 +15,7 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="200dp"
+            android:contentDescription="@string/about"
             android:scaleType="center"
             android:src="@drawable/background_login" />
 
@@ -28,10 +30,10 @@
         <TextView
             android:id="@+id/text_name_profile"
             android:layout_width="wrap_content"
-            android:layout_marginTop="20dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/profile_image"
             android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
             android:text="Dane Reynolds" />
 
         <TextView
@@ -43,16 +45,140 @@
             android:text="Member Since June 2016" />
     </RelativeLayout>
 
-    <Button
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/text_detail"
+        android:layout_height="match_parent"
+        android:background="@color/white"
         android:layout_margin="10dp"
-        android:background="@drawable/button_border"
-        android:text="Contact"
-        android:textAllCaps="false"
-        android:textColor="#979797"
-        tools:text="EDIT MY PROFILE" />
+        android:padding="10dp">
+
+        <LinearLayout
+            android:id="@+id/text_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="HEIGHT"
+                android:textAlignment="center"
+                android:textColor="@color/Black"
+                android:textStyle="normal|bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="WEIGHT"
+                android:textColor="@color/Black"
+                android:textStyle="normal|bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="AGE"
+                android:textColor="@color/Black"
+                android:textStyle="normal|bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/text_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_header"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="158CM"
+                android:textColor="@color/Black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="65KG"
+                android:textAlignment="center"
+                android:textColor="@color/Black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="32"
+                android:textColor="@color/Black" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/text_prefered"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_content"
+            android:text="PREFERED SPORTS"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/Black"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:id="@+id/text_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_prefered"
+            android:text="Futsal, MMA, Long Distance Running"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/Black" />
+
+        <TextView
+            android:id="@+id/text_upcomming"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_activity"
+            android:text="UPCOMING ACTIVITIES"
+            android:textColor="@color/Black"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:id="@+id/text_dummy1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_upcomming"
+            android:layout_marginTop="5dp"
+            android:text="MUAY THAI with Edsar Buno"
+            android:textColor="@color/Black"/>
+
+        <TextView
+            android:id="@+id/text_dummy2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_dummy1"
+            android:text="RUNNING with John Doe"
+            android:textColor="@color/Black"/>
+
+        <TextView
+            android:id="@+id/text_dummy3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_dummy2"
+            android:text="FUTSAL at Patiunus Futsal"
+            android:textColor="@color/Black"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_dummy3"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/button_border"
+            android:text="Contact"
+            android:textAllCaps="false"
+            android:textColor="#979797"
+            tools:text="EDIT MY PROFILE" />
+    </RelativeLayout>
 
 
 </LinearLayout>
