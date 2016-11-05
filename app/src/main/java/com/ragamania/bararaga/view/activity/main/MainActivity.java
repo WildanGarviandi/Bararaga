@@ -17,6 +17,7 @@ import android.widget.ProgressBar;
 
 import com.ragamania.bararaga.R;
 import com.ragamania.bararaga.view.AppBaseActivity;
+import com.ragamania.bararaga.view.activity.message.MessageActivity;
 import com.ragamania.bararaga.view.activity.profile.ProfileActivity;
 import com.ragamania.bararaga.view.activity.settings.SettingsActivity;
 
@@ -152,6 +153,9 @@ public class MainActivity extends AppBaseActivity implements MainMvpView, Naviga
                 this.overridePendingTransition(0,0);
                 return true;
             case R.id.navigation_message :
+                Intent message = new Intent(this, MessageActivity.class);
+                startActivity(message);
+                this.overridePendingTransition(0,0);
                 return true;
             case R.id.navigation_calendar :
                 return true;

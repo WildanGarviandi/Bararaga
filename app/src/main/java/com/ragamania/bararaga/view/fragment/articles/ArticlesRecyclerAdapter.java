@@ -4,6 +4,9 @@ import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.ViewGroup;
 
+import com.ragamania.bararaga.R;
+import com.ragamania.bararaga.view.fragment.coaches.CoachesHolder;
+
 import net.derohimat.baseapp.ui.adapter.BaseRecyclerAdapter;
 import net.derohimat.baseapp.ui.adapter.viewholder.BaseItemViewHolder;
 
@@ -19,16 +22,11 @@ public class ArticlesRecyclerAdapter extends BaseRecyclerAdapter {
 
     @Override
     protected int getItemResourceLayout(int viewType) {
-        return 0;
+        return R.layout.list_row_articles_big;
     }
 
     @Override
     public BaseItemViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        return null;
-    }
-
-    @Override
-    public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
-
+        return new ArticlesHolder(mContext, getView(parent, viewType), mItemClickListener, mLongItemClickListener);
     }
 }

@@ -3,6 +3,7 @@ package com.ragamania.bararaga.data.remote;
 import android.content.Context;
 
 import com.ragamania.bararaga.BuildConfig;
+import com.ragamania.bararaga.model.ArticlesModel.BaseResponseArticles;
 import com.ragamania.bararaga.model.BaseResponseCoaches;
 import com.ragamania.bararaga.model.BaseResponsePlaces;
 import com.ragamania.bararaga.model.DetailCoaches.BaseResponseDetailCoach;
@@ -16,6 +17,7 @@ import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.http.GET;
+import retrofit2.http.Query;
 import rx.Observable;
 
 public interface APIService {
@@ -31,6 +33,10 @@ public interface APIService {
 
     @GET("3fkfu")
     Observable<BaseResponseDetailCoach> getDetailCoach();
+
+    @GET("4bjwm")
+    Observable<BaseResponseArticles> getArticles();
+//    Observable<BaseResponseArticles> getArticles(@Query("index") int index, @Query("offsets") int offsets);
 
 
 //    @GET("data/2.5/weather?APPID=" + API_KEY)

@@ -2,16 +2,29 @@ package com.ragamania.bararaga.view.fragment.articles;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.widget.LinearLayoutManager;
 
+import com.jcodecraeer.xrecyclerview.XRecyclerView;
 import com.ragamania.bararaga.R;
+import com.ragamania.bararaga.model.ArticlesModel.ArticlesList;
 
 import net.derohimat.baseapp.ui.fragment.BaseFragment;
+import net.derohimat.baseapp.ui.view.BaseRecyclerView;
+
+import java.util.List;
+
+import butterknife.Bind;
 
 /**
  * Created by wildangarviandi on 10/8/16.
  */
 
 public class ArticlesFragment extends BaseFragment implements ArticlesMvpView {
+
+    @Bind(R.id.recyclerview) BaseRecyclerView mRecyclerView;
+
+    private ArticlesPresenter mPresenter;
+    private ArticlesRecyclerAdapter mAdapter;
 
     private static final String TAB_POSITION = "tab_position";
 
@@ -30,6 +43,49 @@ public class ArticlesFragment extends BaseFragment implements ArticlesMvpView {
 
     @Override
     protected void onViewReady(@Nullable Bundle savedInstanceState) {
+        setUpAdapter();
+        setUpRecyclerView();
+        setUpPresenter();
+        setHasOptionsMenu(true);
+    }
 
+    private void setUpPresenter() {
+        mPresenter = new ArticlesPresenter(getActivity());
+        mPresenter.attachView(this);
+        mPresenter.loadArticlesList();
+    }
+
+    private void setUpRecyclerView() {
+        LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
+        layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+        mRecyclerView.setLayoutManager(layoutManager);
+        mRecyclerView.setAdapter(mAdapter);
+
+        mRecyclerView.setPullRefreshEnabled(true);
+        mRecyclerView.setLoadingMoreEnabled(false);
+        mRecyclerView.setLoadingListener(new XRecyclerView.LoadingListener() {
+            @Override
+            public void onRefresh() {
+
+            }
+
+            @Override
+            public void onLoadMore() {
+
+            }
+        });
+    }
+
+    private void setUpAdapter() {
+        mAdapter = new ArticlesRecyclerAdapter(mContext);
+        mAdapter.setOnItemClickListener((view, position) -> {
+
+        });
+    }
+
+    @Override
+    public void loadArticles(List<ArticlesList> articlesLists) {
+        mAdapter.addAll(articlesLists);
+        mRecyclerView.refreshComplete();
     }
 }
