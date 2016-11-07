@@ -39,6 +39,8 @@
         <activity android:name=".view.activity.message.MessageActivity"
             android:theme="@style/AppTheme.NoActionBar"/>
 
+        <activity android:name=".view.activity.detail_article.DetailArticleActivity"/>
+
         <activity
             android:name=".view.activity.settings.SettingsActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"

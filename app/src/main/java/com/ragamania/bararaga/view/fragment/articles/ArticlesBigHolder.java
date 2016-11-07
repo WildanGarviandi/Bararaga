@@ -13,23 +13,22 @@ import net.derohimat.baseapp.ui.adapter.BaseRecyclerAdapter;
 import net.derohimat.baseapp.ui.adapter.viewholder.BaseItemViewHolder;
 
 import butterknife.Bind;
-import timber.log.Timber;
 
 /**
- * Created by wildangarviandi on 10/29/16.
+ * Created by wildangarviandi on 11/8/16.
  */
 
-public class ArticlesHolder extends BaseItemViewHolder<ArticlesList> {
+public class ArticlesBigHolder extends BaseItemViewHolder<ArticlesList> {
 
-    @Bind(R.id.img_detail) ImageView iv_news;
+    @Bind(R.id.image_detail_big) ImageView iv_news;
     @Bind(R.id.text_title) TextView tv_title;
-    @Bind(R.id.img_icon) ImageView iv_source;
-    @Bind(R.id.txt_source) TextView tv_source;
+    @Bind(R.id.image_source) ImageView iv_source;
+    @Bind(R.id.text_source) TextView tv_source;
 
-    public ArticlesHolder(Context context,
-                         View itemView,
-                         BaseRecyclerAdapter.OnItemClickListener itemClickListener,
-                         BaseRecyclerAdapter.OnLongItemClickListener longItemClickListener) {
+    public ArticlesBigHolder(Context context,
+                             View itemView,
+                             BaseRecyclerAdapter.OnItemClickListener itemClickListener,
+                             BaseRecyclerAdapter.OnLongItemClickListener longItemClickListener) {
         super(itemView, itemClickListener, longItemClickListener);
         this.mContext = context;
     }

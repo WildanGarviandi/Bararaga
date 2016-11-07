@@ -1,0 +1,26 @@
+{
+  "status": 200,
+  "message": "Coaches for 20-15-2016",
+  "news_id":"299291",
+  "news": {
+    "title":"7 Tips Mempertahankan Nafasmu Saat Melakukan Long Running",
+    "icon_cource":"https://static.glassdoor.com/static/img/mobile/icons/touch-icon-57.png",
+    "source_name":"hellosehat.com",
+    "detail":"Pancasila sebagai dasar negara merupakan suatu asas kerohanian yang meliputi suasana kebatinan atau cita-cita hukum sehingga merupakan suatu sumber nilai norma serta kaidah, baik moral maupun hukum negara, dan menguasai hukum dasar, baik yang tertulis (Undang-Undang Dasar) maupun yang tidak tertulis (konvensi). Dalam kedudukannya sebagai dasar negara, Pancasila mempunyai kekuatan mengikat secara hukum. Oleh karena itu, Pancasila sebagai dasar negara memiliki arti penting dalam mengatur pemerintahan negara. Artinya, seluruh pelaksanaan dan penyelenggaraan negara terutama peraturan perundang-undangan merupakan penjabaran dari nilai-nilai Pancasila. Dengan demikian, dasar negara juga merupakan penjabaran nilai-nilai ﬁlosoﬁs suatu bangsa. Nilai-nilai ﬁlosoﬁs tersebut, di antaranya musyawarah mufakat, percaya kepada Tuhan YME, persamaan derajat, dan rela berkorban.",
+    "action":{
+      "type":"coaches",
+      "text_action":"get RUNNING COACHES",
+      "coaches":{
+        "coaches_id": 1,
+        "name": "Mochamad Slamet",
+        "desc": "Long Distance Running Coach",
+        "img_url": "http://cdn.running.competitor.com/files/2011/07/long-run.jpg",
+        "place_owner": {
+          "name": "Slamet",
+          "icon": "http://www.playcoolsprings.com/sites/playcoolsprings.com/files/cool_springs_icon_futsal_hover.png",
+          "desc": "yang punya abang gw nih"
+        }
+      }
+    }
+  }
+}

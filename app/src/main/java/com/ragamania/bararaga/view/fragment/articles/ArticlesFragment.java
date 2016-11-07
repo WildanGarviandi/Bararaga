@@ -25,6 +25,7 @@ public class ArticlesFragment extends BaseFragment implements ArticlesMvpView {
 
     private ArticlesPresenter mPresenter;
     private ArticlesRecyclerAdapter mAdapter;
+    private List<ArticlesList> articles;
 
     private static final String TAB_POSITION = "tab_position";
 
@@ -79,12 +80,17 @@ public class ArticlesFragment extends BaseFragment implements ArticlesMvpView {
     private void setUpAdapter() {
         mAdapter = new ArticlesRecyclerAdapter(mContext);
         mAdapter.setOnItemClickListener((view, position) -> {
-
+            gotoDetailArticles(articles.get(position));
         });
+    }
+
+    private void gotoDetailArticles(ArticlesList articlesList) {
+
     }
 
     @Override
     public void loadArticles(List<ArticlesList> articlesLists) {
+        articles = articlesLists;
         mAdapter.addAll(articlesLists);
         mRecyclerView.refreshComplete();
     }

@@ -19,23 +19,12 @@ import butterknife.Bind;
 
 public class DetailListActivity extends AppBaseActivity implements DetailListMvpView {
 
-    @Bind(R.id.text_name_coach)
-    TextView textNameCoach;
-
-    @Bind(R.id.text_profession_coach)
-    TextView textProfessionCoach;
-
-    @Bind(R.id.text_overview)
-    TextView textOverview;
-
-    @Bind(R.id.text_schedule)
-    TextView textSchedule;
-
-    @Bind(R.id.img_detail)
-    ImageView ivDetail;
-
-    @Bind(R.id.toolbar)
-    Toolbar mToolbar;
+    @Bind(R.id.text_name_coach) TextView textNameCoach;
+    @Bind(R.id.text_profession_coach) TextView textProfessionCoach;
+    @Bind(R.id.text_overview) TextView textOverview;
+    @Bind(R.id.text_schedule) TextView textSchedule;
+    @Bind(R.id.img_detail) ImageView ivDetail;
+    @Bind(R.id.toolbar) Toolbar mToolbar;
 
     DetailListPresenter mDetailListPresenter;
 

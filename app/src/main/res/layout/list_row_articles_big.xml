@@ -2,16 +2,19 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content"
     android:layout_width="match_parent"
-    android:layout_height="250dp">
+    android:layout_height="250dp"
+    android:clickable="false">
 
     <ImageView
+        android:id="@+id/image_detail_big"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:clickable="false"
         android:contentDescription="@string/about"
         android:scaleType="centerCrop"
-        android:src="@drawable/places_image_1"
-        android:id="@+id/image_detail_big"/>
+        android:src="@drawable/places_image_1"/>
 
     <ImageView
         android:id="@+id/shadow_image"
@@ -19,7 +22,8 @@
         android:layout_height="125dp"
         android:layout_alignParentBottom="true"
         android:alpha="0.5"
-        android:background="@color/black"/>
+        android:background="@color/black"
+        android:clickable="false"/>
 
     <TextView
         android:id="@+id/text_title"
@@ -27,11 +31,12 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignTop="@+id/shadow_image"
-        android:textSize="20sp"
-        android:textStyle="normal|bold"
+        android:layout_marginBottom="10dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="25dp"
-        android:layout_marginBottom="10dp"
+        android:clickable="false"
+        android:textSize="20sp"
+        android:textStyle="normal|bold"
         tools:text="Manfaat ikan baramudi untuk nutrisi dietmu"/>
 
 
@@ -39,23 +44,26 @@
         android:id="@+id/layout_source"
         android:layout_width="wrap_content"
         android:layout_height="125dp"
-        android:layout_marginLeft="20dp"
         android:layout_alignParentBottom="true"
         android:layout_below="@id/text_title"
+        android:layout_marginLeft="20dp"
+        android:clickable="false"
         android:orientation="horizontal">
 
         <ImageView
+            android:id="@+id/image_source"
             android:layout_width="18dp"
             android:layout_height="18dp"
-            android:src="@drawable/ic_refresh"
-            android:id="@+id/image_source"/>
+            android:clickable="false"
+            android:src="@drawable/ic_refresh"/>
 
         <TextView
-            android:layout_marginLeft="10dp"
+            android:id="@+id/text_source"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:text="startjaahahah.com"
-            android:id="@+id/text_source"/>
+            android:layout_marginLeft="10dp"
+            android:clickable="false"
+            tools:text="startjaahahah.com"/>
 
     </LinearLayout>
 </RelativeLayout>

@@ -3,13 +3,15 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="150dp">
+    android:layout_height="150dp"
+    android:clickable="false">
 
     <ImageView
         android:id="@+id/img_detail"
         android:layout_width="130dp"
         android:layout_height="130dp"
         android:layout_margin="10dp"
+        android:clickable="false"
         android:contentDescription="@string/about"
         android:scaleType="centerCrop"
         android:src="@drawable/places_image_1"/>
@@ -21,6 +23,7 @@
         android:layout_marginTop="20dp"
         android:layout_toEndOf="@+id/img_detail"
         android:layout_toRightOf="@+id/img_detail"
+        android:clickable="false"
         android:textColor="@color/Black"
         android:textSize="18sp"
         android:textStyle="normal|bold"
@@ -34,6 +37,7 @@
         android:layout_alignStart="@+id/text_title"
         android:layout_below="@+id/text_title"
         android:layout_marginTop="20dp"
+        android:clickable="false"
         android:orientation="horizontal">
 
         <ImageView
@@ -41,13 +45,15 @@
             android:layout_width="18dp"
             android:layout_height="18dp"
             android:background="@drawable/ic_launcher"
+            android:clickable="false"
             android:src="@drawable/ic_refresh"/>
 
         <TextView
             android:id="@+id/txt_source"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="0dp"
+            android:layout_marginLeft="10dp"
+            android:clickable="false"
             android:textColor="@color/Black"
             tools:text="startjaahahah.com"/>
 

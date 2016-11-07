@@ -3,6 +3,7 @@ package com.ragamania.bararaga.data.remote;
 import android.content.Context;
 
 import com.ragamania.bararaga.BuildConfig;
+import com.ragamania.bararaga.model.ArticleDetail.BaseResponseArticleDetail;
 import com.ragamania.bararaga.model.ArticlesModel.BaseResponseArticles;
 import com.ragamania.bararaga.model.BaseResponseCoaches;
 import com.ragamania.bararaga.model.BaseResponsePlaces;
@@ -36,6 +37,10 @@ public interface APIService {
 
     @GET("4bjwm")
     Observable<BaseResponseArticles> getArticles();
+
+    @GET("440rs")
+    Observable<BaseResponseArticleDetail> getDetailArticle();
+
 //    Observable<BaseResponseArticles> getArticles(@Query("index") int index, @Query("offsets") int offsets);
 
 
