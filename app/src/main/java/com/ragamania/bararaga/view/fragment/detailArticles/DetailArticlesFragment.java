@@ -18,10 +18,10 @@ public class DetailArticlesFragment extends BaseFragment implements DetailArticl
 
     private DetailArticlesPresenter mPresenter;
 
-    public static DetailArticlesFragment newInstance(int articleID) {
+    public static DetailArticlesFragment newInstance(String articleID) {
         DetailArticlesFragment detailArticlesFragment = new DetailArticlesFragment();
         Bundle args = new Bundle();
-        args.putInt(ARTICLE_ID, articleID);
+        args.putString(ARTICLE_ID, articleID);
         detailArticlesFragment.setArguments(args);
         return detailArticlesFragment;
     }

@@ -1,5 +1,6 @@
 package com.ragamania.bararaga.view.fragment.coaches;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
@@ -7,6 +8,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import com.jcodecraeer.xrecyclerview.XRecyclerView;
 import com.ragamania.bararaga.R;
 import com.ragamania.bararaga.model.CoachesList;
+import com.ragamania.bararaga.view.activity.detail_list.DetailListActivity;
 
 import net.derohimat.baseapp.ui.fragment.BaseFragment;
 import net.derohimat.baseapp.ui.view.BaseRecyclerView;
@@ -53,7 +55,7 @@ public class CoachesFragment extends BaseFragment implements CoachesMvpView {
     private void setUpAdapter() {
         mAdapter = new CoachesRecyclerAdapter(mContext);
         mAdapter.setOnItemClickListener((view, position) -> {
-
+            gotoDetail();
         });
     }
 
@@ -89,5 +91,11 @@ public class CoachesFragment extends BaseFragment implements CoachesMvpView {
     public void loadCoachesList(List<CoachesList> coachesList) {
         mAdapter.addAll(coachesList);
         mRecyclerView.refreshComplete();
+    }
+
+    private void gotoDetail() {
+        Intent i = new Intent(getActivity(), DetailListActivity.class);
+        startActivity(i);
+        getActivity().overridePendingTransition(0,0);
     }
 }

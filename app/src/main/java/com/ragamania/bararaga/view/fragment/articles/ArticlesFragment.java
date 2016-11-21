@@ -1,5 +1,6 @@
 package com.ragamania.bararaga.view.fragment.articles;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
@@ -7,6 +8,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import com.jcodecraeer.xrecyclerview.XRecyclerView;
 import com.ragamania.bararaga.R;
 import com.ragamania.bararaga.model.ArticlesModel.ArticlesList;
+import com.ragamania.bararaga.view.activity.detail_article.DetailArticleActivity;
 
 import net.derohimat.baseapp.ui.fragment.BaseFragment;
 import net.derohimat.baseapp.ui.view.BaseRecyclerView;
@@ -85,7 +87,10 @@ public class ArticlesFragment extends BaseFragment implements ArticlesMvpView {
     }
 
     private void gotoDetailArticles(ArticlesList articlesList) {
-
+        Intent i = new Intent(getActivity(), DetailArticleActivity.class);
+        i.putExtra("ARTICLE_ID", articlesList.getId_article());
+        startActivity(i);
+        getActivity().overridePendingTransition(0,0);
     }
 
     @Override
