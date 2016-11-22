@@ -39,7 +39,8 @@
         <activity android:name=".view.activity.message.MessageActivity"
             android:theme="@style/AppTheme.NoActionBar"/>
 
-        <activity android:name=".view.activity.detail_article.DetailArticleActivity"/>
+        <activity android:name=".view.activity.detail_article.DetailArticleActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
 
         <activity
             android:name=".view.activity.settings.SettingsActivity"

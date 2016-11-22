@@ -10,7 +10,6 @@ import com.ragamania.bararaga.view.activity.detail_list.DetailListPresenter;
 import com.ragamania.bararaga.view.activity.main.MainPresenter;
 import com.ragamania.bararaga.view.fragment.articles.ArticlesPresenter;
 import com.ragamania.bararaga.view.fragment.coaches.CoachesPresenter;
-import com.ragamania.bararaga.view.fragment.detailArticles.DetailArticlesPresenter;
 import com.ragamania.bararaga.view.fragment.login.LoginPresenter;
 import com.ragamania.bararaga.view.fragment.places.PlacesPresenter;
 
@@ -41,8 +40,6 @@ public interface ApplicationComponent {
     void inject(UnauthorisedInterceptor unauthorisedInterceptor);
 
     void inject(DetailListPresenter detailListPresenter);
-
-    void inject(DetailArticlesPresenter detailArticlesPresenter);
 
     APIService apiService();
 

@@ -2,16 +2,20 @@ package com.ragamania.bararaga.view.activity.detail_article;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 
 import com.ragamania.bararaga.R;
 import com.ragamania.bararaga.view.AppBaseActivity;
-import com.ragamania.bararaga.view.fragment.detailArticles.DetailArticlesFragment;
+
+import butterknife.Bind;
 
 /**
  * Created by wildangarviandi on 11/8/16.
  */
 
 public class DetailArticleActivity extends AppBaseActivity implements DetailArticleMvpView {
+
+    @Bind(R.id.toolbar) Toolbar mToolbar;
 
     @Override
     protected int getResourceLayout() {
@@ -31,11 +35,13 @@ public class DetailArticleActivity extends AppBaseActivity implements DetailArti
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         String articleID = getIntent().getStringExtra("ARTICLE_ID");
-        getBaseFragmentManager()
-                .beginTransaction()
-                .replace(R.id.content_view, DetailArticlesFragment.newInstance(articleID))
-                .addToBackStack(null).commit();
+
+        setSupportActionBar(mToolbar);
+        mActionBar = getSupportActionBar();
+        if (mActionBar != null) {
+            mActionBar.setDisplayHomeAsUpEnabled(true);
+            mActionBar.setDisplayShowTitleEnabled(false);
+        }
     }
 }
