@@ -1,4 +1,4 @@
-package com.ragamania.bararaga.view.activity.message;
+package com.ragamania.bararaga.view.activity.message_list;
 
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -15,11 +15,11 @@ import butterknife.Bind;
 
 public class MessageActivity extends AppBaseActivity {
 
-    @Bind(R.id.toolbar)
-    Toolbar mToolbar;
+    @Bind(R.id.toolbar) Toolbar mToolbar;
+    @Bind(R.id.text_header_chat) TextView mTVHeaderChat;
 
-    @Bind(R.id.text_header_chat)
-    TextView mTVHeaderChat;
+    private MessagePresenter mPresenter;
+    private MessageRecyclerAdapter mAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +40,22 @@ public class MessageActivity extends AppBaseActivity {
 
     @Override
     protected void onViewReady(Bundle savedInstanceState) {
+        setupAdapter();
+        setupRecyclerView();
+        setupPresenter();
+    }
 
+    private void setupPresenter() {
+        mPresenter = new ArticlesPresenter(getActivity());
+        mPresenter.attachView(this);
+        mPresenter.loadArticlesList();
+    }
+
+    private void setupRecyclerView() {
+        
+    }
+
+    private void setupAdapter() {
+        
     }
 }

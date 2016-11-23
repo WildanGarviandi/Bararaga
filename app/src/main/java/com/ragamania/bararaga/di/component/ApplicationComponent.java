@@ -8,6 +8,7 @@ import com.ragamania.bararaga.di.module.ApplicationModule;
 import com.ragamania.bararaga.view.activity.auth.AuthPresenter;
 import com.ragamania.bararaga.view.activity.detail_list.DetailListPresenter;
 import com.ragamania.bararaga.view.activity.main.MainPresenter;
+import com.ragamania.bararaga.view.activity.message_list.MessagePresenter;
 import com.ragamania.bararaga.view.fragment.articles.ArticlesPresenter;
 import com.ragamania.bararaga.view.fragment.coaches.CoachesPresenter;
 import com.ragamania.bararaga.view.fragment.login.LoginPresenter;
@@ -40,6 +41,8 @@ public interface ApplicationComponent {
     void inject(UnauthorisedInterceptor unauthorisedInterceptor);
 
     void inject(DetailListPresenter detailListPresenter);
+
+    void inject(MessagePresenter messagePresenter);
 
     APIService apiService();
 

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/image_photo"
+            android:layout_width="40sp"
+            android:layout_height="40dp"
+            android:src="@drawable/img_detail_1" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@id/image_photo"
+            android:text="MARTIN GABRIEL"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@id/image_photo"
+            android:text="Coach long running" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="10"
+            android:paddingRight="10dp"
+            android:textStyle="bold"
+            android:layout_gravity="right"
+            android:layout_marginLeft="55dp"
+            android:text="Hey lets catch soon. Do you want to grab lunch sometime this weekend? let me know!"
+            android:textColor="@color/app_base" />
+
+        <ImageView
+            android:id="@+id/icon_notif"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_launcher" />
+    </LinearLayout>
+
+
+</LinearLayout>

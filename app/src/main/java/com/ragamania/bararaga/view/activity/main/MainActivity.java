@@ -17,7 +17,7 @@ import android.widget.ProgressBar;
 
 import com.ragamania.bararaga.R;
 import com.ragamania.bararaga.view.AppBaseActivity;
-import com.ragamania.bararaga.view.activity.message.MessageActivity;
+import com.ragamania.bararaga.view.activity.message_list.MessageActivity;
 import com.ragamania.bararaga.view.activity.profile.ProfileActivity;
 import com.ragamania.bararaga.view.activity.settings.SettingsActivity;
 

@@ -36,7 +36,7 @@
         <activity android:name=".view.activity.profile.ProfileActivity"
             android:theme="@style/AppTheme.NoActionBar"/>
 
-        <activity android:name=".view.activity.message.MessageActivity"
+        <activity android:name=".view.activity.message_list.MessageActivity"
             android:theme="@style/AppTheme.NoActionBar"/>
 
         <activity android:name=".view.activity.detail_article.DetailArticleActivity"

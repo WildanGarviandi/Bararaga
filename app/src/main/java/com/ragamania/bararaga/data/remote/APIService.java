@@ -41,6 +41,9 @@ public interface APIService {
     @GET("440rs")
     Observable<BaseResponseArticleDetail> getDetailArticle();
 
+    @GET("")
+    Observable<>
+
 //    Observable<BaseResponseArticles> getArticles(@Query("index") int index, @Query("offsets") int offsets);
 
 
