@@ -5,6 +5,7 @@ import com.ragamania.bararaga.view.activity.auth.AuthActivity;
 import com.ragamania.bararaga.view.activity.detail_article.DetailArticleActivity;
 import com.ragamania.bararaga.view.activity.detail_list.DetailListActivity;
 import com.ragamania.bararaga.view.activity.main.MainActivity;
+import com.ragamania.bararaga.view.activity.message_list.MessageActivity;
 import com.ragamania.bararaga.view.activity.profile.ProfileActivity;
 import com.ragamania.bararaga.view.activity.settings.SettingsActivity;
 
@@ -26,4 +27,5 @@ public interface ActivityComponent extends ApplicationComponent {
 
     void inject(DetailArticleActivity detailArticleActivity);
 
+    void inject(MessageActivity messageActivity);
 }

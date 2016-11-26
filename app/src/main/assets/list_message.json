@@ -1,73 +1,84 @@
 {
-  "status":200,
-  "Message":"Date-02-10-12",
-  "object": [{
-    "user" : {
-      "img_profile":"http://gridgum.com/templates/free-themes/store/images/testimonials/1.jpg",
-      "username":"John Doe",
-      "title":"Long running Coach"
-    },
-    "pesan":{
-      "lastest":[
-        {"message":"Hey lets catch up later on weekend while we had a lunch what about this saturday?",
-          "date":"12-03-2016/22:30",
-          "viewed":false}
-      ]
-    }
-  },
+  "status": 200,
+  "Message": "Date-02-10-12",
+  "object": [
     {
-      "user" : {
-        "img_profile":"http://gridgum.com/templates/free-themes/store/images/testimonials/1.jpg",
-        "username":"John Doe",
-        "title":"Long running Coach"
+      "user": {
+        "img_profile": "http://gridgum.com/templates/free-themes/store/images/testimonials/1.jpg",
+        "username": "John Doe",
+        "title": "Long running Coach"
       },
-      "pesan":{
-        "lastest":[
-          {"message":"Hey lets catch up later on weekend while we had a lunch what about this saturday?",
-            "date":"12-03-2016/22:30",
-            "viewed":false}
+      "pesan": {
+        "lastest": [
+          {
+            "message": "Hey lets catch up later on weekend while we had a lunch what about this saturday?",
+            "date": "12-03-2016/22:30",
+            "viewed": false
+          }
         ]
       }
     },
     {
-      "user" : {
-        "img_profile":"http://gridgum.com/templates/free-themes/store/images/testimonials/1.jpg",
-        "username":"John Doe",
-        "title":"Long running Coach"
+      "user": {
+        "img_profile": "http://gridgum.com/templates/free-themes/store/images/testimonials/1.jpg",
+        "username": "John Doe",
+        "title": "Long running Coach"
       },
-      "pesan":{
-        "lastest":[
-          {"message":"Hey lets catch up later on weekend while we had a lunch what about this saturday?",
-            "date":"12-03-2016/22:30",
-            "viewed":false}
+      "pesan": {
+        "lastest": [
+          {
+            "message": "Hey lets catch up later on weekend while we had a lunch what about this saturday?",
+            "date": "12-03-2016/22:30",
+            "viewed": false
+          }
         ]
       }
     },
     {
-      "user" : {
-        "img_profile":"http://gridgum.com/templates/free-themes/store/images/testimonials/1.jpg",
-        "username":"John Doe",
-        "title":"Long running Coach"
+      "user": {
+        "img_profile": "http://gridgum.com/templates/free-themes/store/images/testimonials/1.jpg",
+        "username": "John Doe",
+        "title": "Long running Coach"
       },
-      "pesan":{
-        "lastest":[
-          {"message":"Hey lets catch up later on weekend while we had a lunch what about this saturday?",
-            "date":"12-03-2016/22:30",
-            "viewed":false}
+      "pesan": {
+        "lastest": [
+          {
+            "message": "Hey lets catch up later on weekend while we had a lunch what about this saturday?",
+            "date": "12-03-2016/22:30",
+            "viewed": false
+          }
         ]
       }
     },
     {
-      "user" : {
-        "img_profile":"http://gridgum.com/templates/free-themes/store/images/testimonials/1.jpg",
-        "username":"John Doe",
-        "title":"Long running Coach"
+      "user": {
+        "img_profile": "http://gridgum.com/templates/free-themes/store/images/testimonials/1.jpg",
+        "username": "John Doe",
+        "title": "Long running Coach"
       },
-      "pesan":{
-        "lastest":[
-          {"message":"Hey lets catch up later on weekend while we had a lunch what about this saturday?",
-            "date":"12-03-2016/22:30",
-            "viewed":false}
+      "pesan": {
+        "lastest": [
+          {
+            "message": "Hey lets catch up later on weekend while we had a lunch what about this saturday?",
+            "date": "12-03-2016/22:30",
+            "viewed": false
+          }
+        ]
+      }
+    },
+    {
+      "user": {
+        "img_profile": "http://gridgum.com/templates/free-themes/store/images/testimonials/1.jpg",
+        "username": "John Doe",
+        "title": "Long running Coach"
+      },
+      "pesan": {
+        "lastest": [
+          {
+            "message": "Hey lets catch up later on weekend while we had a lunch what about this saturday?",
+            "date": "12-03-2016/22:30",
+            "viewed": false
+          }
         ]
       }
     }

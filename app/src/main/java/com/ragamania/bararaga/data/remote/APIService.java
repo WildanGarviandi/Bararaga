@@ -7,6 +7,7 @@ import com.ragamania.bararaga.model.ArticleDetail.BaseResponseArticleDetail;
 import com.ragamania.bararaga.model.ArticlesModel.BaseResponseArticles;
 import com.ragamania.bararaga.model.BaseResponseCoaches;
 import com.ragamania.bararaga.model.BaseResponsePlaces;
+import com.ragamania.bararaga.model.ChatListModel.BaseReponseChatList;
 import com.ragamania.bararaga.model.DetailCoaches.BaseResponseDetailCoach;
 
 import java.util.concurrent.TimeUnit;
@@ -41,8 +42,9 @@ public interface APIService {
     @GET("440rs")
     Observable<BaseResponseArticleDetail> getDetailArticle();
 
-    @GET("")
-    Observable<>
+    //TODO : Upload the json
+    @GET("2yyef")
+    Observable<BaseReponseChatList> getListMessage();
 
 //    Observable<BaseResponseArticles> getArticles(@Query("index") int index, @Query("offsets") int offsets);
 
